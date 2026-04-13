@@ -5,15 +5,15 @@ import java.util.Scanner;
 public class CalculatorApp {
     public static void main(String[] args) {
 
-        double finalResult = 0.0;
+        float finalResult = 0;
 
         Scanner input1 = new Scanner(System.in);
         System.out.println("Enter the first number:");
-        double answer1 = input1.nextDouble();
+        float answer1 = input1.nextFloat();
 
         Scanner input2 = new Scanner(System.in);
         System.out.println("Enter the second number:");
-        double answer2 = input2.nextDouble();
+        float answer2 = input2.nextFloat();
 
         Scanner input3 = new Scanner(System.in);
         System.out.println("Possible calculations:");
@@ -26,19 +26,19 @@ public class CalculatorApp {
 
         if (responseChar.equals("a") || responseChar.equals("A")) {
             finalResult = answer1 + answer2;
-            System.out.println(String.format("%.2f", finalResult));
+            System.out.println(String.format("%.2f", answer1) + " + " + String.format("%.2f", answer2) + " = " + String.format("%.2f", finalResult));
         }
         if (responseChar.equals("s") || responseChar.equals("S")) {
             finalResult = answer1 - answer2;
-            System.out.println(String.format("%.2f", finalResult));
+            System.out.println(String.format("%.2f", answer1) + " - " + String.format("%.2f", answer2) + " = " + String.format("%.2f", finalResult));
         }
         if (responseChar.equals("m") || responseChar.equals("M")) {
             finalResult = answer1 * answer2;
-            System.out.println(String.format("%.2f", finalResult));
+            System.out.println(String.format("%.2f", answer1) + " * " + String.format("%.2f", answer2) + " = " + String.format("%.2f", finalResult));
         }
         if (responseChar.equals("d") || responseChar.equals("D")) {
             finalResult = answer1 / answer2;
-            System.out.println(String.format("%.2f", finalResult));
+            System.out.println(String.format("%.2f", answer1) + " / " + String.format("%.2f", answer2) + " = " + String.format("%.2f", finalResult));
         }
     }
 }
